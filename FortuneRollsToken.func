@@ -1,9 +1,7 @@
 ;; FortuneRollsToken.func
 
-int total_supply = 1000000;  ;; Khởi tạo tổng cung token
-
-int get_total_supply() method_id {
-    return total_supply;      ;; Trả về tổng cung
+int total_supply() method_id {
+    return 1000000;  ;; Trả về tổng cung token
 }
 
 int get_balance(slice account) method_id {
