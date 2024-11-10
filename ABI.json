@@ -1,0 +1,44 @@
+[
+    {
+        "name": "totalSupply",
+        "type": "function",
+        "inputs": [],
+        "outputs": [
+            {
+                "name": "",
+                "type": "int"
+            }
+        ]
+    },
+    {
+        "name": "balanceOf",
+        "type": "function",
+        "inputs": [
+            {
+                "name": "account",
+                "type": "int"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "",
+                "type": "int"
+            }
+        ]
+    },
+    {
+        "name": "transfer",
+        "type": "function",
+        "inputs": [
+            {
+                "name": "to",
+                "type": "int"
+            },
+            {
+                "name": "amount",
+                "type": "int"
+            }
+        ],
+        "outputs": []
+    }
+]
