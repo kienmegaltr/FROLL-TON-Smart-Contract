@@ -1,14 +1,16 @@
 ;; FortuneRollsToken.func
 
+;; Hàm trả về tổng cung của token
 int total_supply() method_id {
-    return 1000000;  ;; Trả về tổng cung token
+    return 1000000;  ;; Tổng cung token
 }
 
+;; Hàm lấy số dư của một tài khoản (ví dụ đơn giản)
 int get_balance(slice account) method_id {
-    ;; Giả sử luôn trả về 0 cho ví dụ đơn giản này
-    return 0;
+    return 0;  ;; Trả về số dư là 0
 }
 
+;; Hàm chuyển token (chỉ là ví dụ, chưa có logic thực tế)
 () transfer(slice sender, slice recipient, int amount) method_id {
-    ;; Hàm mẫu để chuyển token, chưa thực hiện cập nhật số dư thực tế
+    ;; Chưa có logic thực tế cho việc chuyển token
 }
