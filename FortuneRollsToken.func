@@ -14,3 +14,8 @@ int get_balance(slice account) method_id {
 () transfer(slice sender, slice recipient, int amount) method_id {
     ;; Chưa có logic thực tế cho việc chuyển token
 }
+
+;; Hàm main cần thiết để khởi tạo hợp đồng
+() main() {
+    ;; Hiện tại, hàm main không thực hiện công việc gì cụ thể
+}
