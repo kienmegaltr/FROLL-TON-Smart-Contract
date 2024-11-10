@@ -1,21 +1,5 @@
 ;; FortuneRollsToken.func
 
-;; Hàm trả về tổng cung của token
-int total_supply() method_id {
-    return 1000000;  ;; Tổng cung token
-}
-
-;; Hàm lấy số dư của một tài khoản (ví dụ đơn giản)
-int get_balance(slice account) method_id {
-    return 0;  ;; Trả về số dư là 0
-}
-
-;; Hàm chuyển token (chỉ là ví dụ, chưa có logic thực tế)
-() transfer(slice sender, slice recipient, int amount) method_id {
-    ;; Chưa có logic thực tế cho việc chuyển token
-}
-
-;; Hàm main cần thiết để khởi tạo hợp đồng
 () main() {
-    ;; Hiện tại, hàm main không thực hiện công việc gì cụ thể
+    ;; Hàm main hiện tại không thực hiện gì cụ thể
 }
