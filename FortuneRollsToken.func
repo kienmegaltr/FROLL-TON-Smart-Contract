@@ -1,16 +1,16 @@
 ;; FortuneRollsToken.func
-;; Đây là mã FunC đơn giản cho hợp đồng token trên TON
 
-int totalSupply() method_id {
-    return 1000000; ;; Tổng cung của token
+int total_supply = 1000000;  ;; Khởi tạo tổng cung token
+
+int get_total_supply() method_id {
+    return total_supply;      ;; Trả về tổng cung
 }
 
-int getBalance(slice account) method_id {
-    ;; Hàm lấy số dư của tài khoản (giả sử luôn trả về 0 cho ví dụ đơn giản)
+int get_balance(slice account) method_id {
+    ;; Giả sử luôn trả về 0 cho ví dụ đơn giản này
     return 0;
 }
 
 () transfer(slice sender, slice recipient, int amount) method_id {
-    ;; Hàm chuyển token từ sender sang recipient
-    ;; Chưa thực hiện cập nhật số dư thực tế, chỉ là mẫu đơn giản
+    ;; Hàm mẫu để chuyển token, chưa thực hiện cập nhật số dư thực tế
 }
