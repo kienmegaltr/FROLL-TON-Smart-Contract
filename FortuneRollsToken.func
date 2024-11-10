@@ -1,0 +1,30 @@
+contract FortuneRollsToken {
+
+    ;; Khai báo các biến
+    int totalSupply;            ;; Tổng cung của token
+    int balanceOf;              ;; Số dư của token cho các tài khoản
+
+    ;; Khởi tạo hợp đồng với tổng cung nhất định
+    init() {
+        ;; Đặt tổng cung của token là 1 triệu FROLL
+        totalSupply = 1000000;
+        balanceOf[msg.sender] = totalSupply;   ;; Gán tất cả token cho người tạo hợp đồng
+    }
+
+    ;; Hàm để chuyển token
+    function transfer(int to, int amount) {
+        require(balanceOf[msg.sender] >= amount);   ;; Kiểm tra nếu người gửi có đủ token
+        balanceOf[msg.sender] -= amount;            ;; Trừ số dư người gửi
+        balanceOf[to] += amount;                    ;; Cộng vào số dư người nhận
+    }
+
+    ;; Lấy số dư của một tài khoản
+    function getBalance(int account) returns (int) {
+        return balanceOf[account];
+    }
+
+    ;; Lấy tổng cung token
+    function getTotalSupply() returns (int) {
+        return totalSupply;
+    }
+}
