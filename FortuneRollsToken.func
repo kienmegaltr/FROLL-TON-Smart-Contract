@@ -1,30 +1,22 @@
-contract FortuneRollsToken {
+;; FortuneRollsToken.func
+;; Đây là một mã mẫu FunC đơn giản cho hợp đồng token trên TON
 
-    ;; Khai báo các biến
-    int totalSupply;            ;; Tổng cung của token
-    int balanceOf;              ;; Số dư của token cho các tài khoản
+int totalSupply;
+cell balance;
 
-    ;; Khởi tạo hợp đồng với tổng cung nhất định
-    init() {
-        ;; Đặt tổng cung của token là 1 triệu FROLL
-        totalSupply = 1000000;
-        balanceOf[msg.sender] = totalSupply;   ;; Gán tất cả token cho người tạo hợp đồng
-    }
+() main() {
+    ;; Khởi tạo tổng cung token
+    totalSupply = 1000000;
+    balance = new_cell();
+}
 
-    ;; Hàm để chuyển token
-    function transfer(int to, int amount) {
-        require(balanceOf[msg.sender] >= amount);   ;; Kiểm tra nếu người gửi có đủ token
-        balanceOf[msg.sender] -= amount;            ;; Trừ số dư người gửi
-        balanceOf[to] += amount;                    ;; Cộng vào số dư người nhận
-    }
+() transfer(slice sender, slice recipient, int amount) {
+    ;; Kiểm tra số dư và thực hiện chuyển token từ sender sang recipient
+    ;; Đây chỉ là mã mẫu, cần thêm mã logic để kiểm tra và cập nhật số dư thực tế
+}
 
-    ;; Lấy số dư của một tài khoản
-    function getBalance(int account) returns (int) {
-        return balanceOf[account];
-    }
-
-    ;; Lấy tổng cung token
-    function getTotalSupply() returns (int) {
-        return totalSupply;
-    }
+int getBalance(slice account) {
+    ;; Hàm lấy số dư của tài khoản
+    ;; Cần thêm mã logic để truy xuất số dư từ dữ liệu
+    return 0;
 }
